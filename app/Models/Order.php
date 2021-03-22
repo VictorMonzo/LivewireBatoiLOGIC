@@ -9,6 +9,8 @@ class Order extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['state', 'address', 'quantity', 'price', 'user_id', 'product_id'];
+
     // Crear relación Uno a muchos con la tabla Users
     public function users() {
         return $this->belongsTo('App\Models\User', 'user_id');
