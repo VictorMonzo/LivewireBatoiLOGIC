@@ -9,7 +9,7 @@ class Provider extends Model
 {
     use HasFactory;
 
-    protected $fillable = [''];
+    protected $fillable = ['name', 'email'];
 
     // Crear relación Uno a muchos con la tabla Products
     public function products() {

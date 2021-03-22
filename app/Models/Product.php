@@ -9,6 +9,8 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description', 'price', 'stock', 'active', 'photo', 'provider_id'];
+
     // Crear relación Uno a muchos con la tabla OrderLines
     public function orders() {
         return $this->hasMany('App\Models\Product');
